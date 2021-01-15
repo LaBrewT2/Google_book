@@ -1,0 +1,25 @@
+import axios from "axios";
+
+export default  {
+    // Retrieves Google books
+    googleBooks: function(query) {
+        return axios.get(`GET https://www.googleapis.com/books/v1/volumes/s1gVAAAAYAAJ`)
+    },
+    // Saves book to the DB
+    saveBook: function(bookData) {
+        return axios.post("/api/books", bookData);
+    },
+    // Gets saved books from DB
+    getBooks: function() {
+        return axios.get("/api/books", { params: { q: query} });
+    },
+    // Gets book with the given ID
+    getBook: function(id) {
+        return axios.get("/api/books/" + id);
+    },
+    // Deletes book with the given ID
+    deleteBook: function(id) {
+        return axios.delete("/api/books/" + id);
+    }
+};
+

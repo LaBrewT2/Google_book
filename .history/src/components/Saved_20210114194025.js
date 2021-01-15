@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SavedList from "../SavedList";
+import SavedList from "../SavedList/SavedListItem";
 
-class SavedList extends Component {
+class ResultList extends Component {
 
 
     render() {
@@ -24,4 +24,4 @@ class SavedList extends Component {
     }
 }
 
-export default SavedList
+export default ResultList

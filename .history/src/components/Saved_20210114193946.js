@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import SavedList from "../SavedList";
+import SavedListItem from "../SavedListItem/SavedListItem";
 
-class SavedList extends Component {
+class ResultList extends Component {
 
 
     render() {
         console.log("Props", this.props.bookState)
         return (
             this.props.bookState.map((book) => (
-            <SavedList 
+            <SavedListItem 
             key={book._id}
             id={book._id}
             title={book.title}
@@ -24,4 +24,4 @@ class SavedList extends Component {
     }
 }
 
-export default SavedList
+export default ResultList

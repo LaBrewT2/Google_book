@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SavedList from "../SavedList";
 
-class SavedList extends Component {
+class ResultList extends Component {
 
 
     render() {

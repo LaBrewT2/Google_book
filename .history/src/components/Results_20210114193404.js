@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import List from "../List";
+import ResultListItem from "../ResultListItem/ResultListItem";
 
-class Results extends Component {
+class ResultList extends Component {
 
 
     render() {
         console.log("Props", this.props.bookState)
         return (
             this.props.bookState.map((book) => (
-            <List 
+            <ListItem 
             key={book.id}
             id={book.id}
             title={book.volumeInfo.title}
@@ -24,4 +24,4 @@ class Results extends Component {
     }
 }
 
-export default Results
+export default ResultList
